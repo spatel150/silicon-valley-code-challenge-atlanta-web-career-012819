@@ -16,6 +16,10 @@ class Startup
         @@all
     end 
 
+    def pivot
+        # Need clarification with the README #
+    end 
+
     def self.find_by_founder(founder)
         @@all.find {|fr| fr.founder == founder}
     end 
@@ -42,12 +46,13 @@ class Startup
         FundingRound.all.select {|fr| fr.startup == self}.map {|fr| fr.venture_capitalist}.uniq
     end
 
-    # def big_investors
-    #     self.investors.select {|vc| vc.total_worth > 1000000000}
-    # end 
     def big_investors
-        FundingRound.all.select {|fr| fr.startup == self}.map {|fr| fr.venture_capitalist}.select {|fr| fr.total_worth > 10000000000}
-    end
+        self.investors.select {|vc| vc.total_worth > 1000000000}
+    end 
+    
+    # def big_investors
+    #     FundingRound.all.select {|fr| fr.startup == self}.map {|fr| fr.venture_capitalist}.select {|fr| fr.total_worth > 10000000000}
+    # end
 
 end 
 
