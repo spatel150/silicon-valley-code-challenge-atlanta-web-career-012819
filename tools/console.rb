@@ -8,6 +8,7 @@ end
 # so they will be available to test and play around with in your console
 
 tesla = Startup.new("Tesla", "Elon Musk", "Cars")
+vib = Startup.new("Vibs_Cars", "Vib", "Cars" )
 amazon = Startup.new("Amazon", "Jeff Bezos", "E-Commerce")
 apple = Startup.new("Apple", "Steve Jobs", "Computers")
 facebook = Startup.new("Facebook", "Mark Zuckerberg", "Social Media")

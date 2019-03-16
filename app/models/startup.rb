@@ -28,6 +28,11 @@ class Startup
         @@all.collect {|start| start.domain}
     end 
 
+    # def self.find_all_by_domain(domain)
+    #     @@all.find_all {|start| start.domain == domain}
+    #     @@all.select {|start| start.domain == domain}
+    # end 
+
     def sign_contract(startup, venture_capitalist, type, investment)
         FundingRound.new(self, venture_capitalist, type, investment)
     end 

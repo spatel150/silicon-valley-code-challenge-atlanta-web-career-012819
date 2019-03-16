@@ -17,4 +17,10 @@ class FundingRound
         @@all
     end 
 
+    # def investment
+    #     if (@investment > 0)
+    #         return @investment
+    #     end
+    # end 
+
 end

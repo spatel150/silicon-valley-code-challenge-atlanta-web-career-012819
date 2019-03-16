@@ -15,7 +15,7 @@ class VentureCapitalist
     end
 
     def self.tres_commas_club
-        @@all.select {|vc| vc.total_worth > 1000000000}
+        @@all.find_all {|vc| vc.total_worth > 1000000000}
     end
 
     def offer_contract(startup, venture_capitalist, type, investment)
